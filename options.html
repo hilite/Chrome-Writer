@@ -1,0 +1,70 @@
+﻿<html> 
+	<head> 
+    <meta charset="UTF-8"> 
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+  </head> 
+	<body style="margin:3px;"> 
+		<ul class="tabs">
+			<li class="active"><a href="options.html">設定</a></li>
+			<li><a href="howtouse.html">使い方</a></li>
+		</ul>
+		<div class="row" style="margin:10px;">
+			<div class="row">
+				<div class="span4">
+					<h5>Splitter</h5>
+					<textarea id="splitter"></textarea>
+				</div>
+				<div class="span6">
+					<h6>Splitterについて</h6>
+					<ul>
+						<li>入力テキスト分割文字列です。</li>
+						<li>例)下記の場合3分割します。
+							<blockquote>アフリカはとても楽しい<br/>---<br />africa-fan<br/>---<br />不思議な人が一杯いるよ。</blockquote>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<hr /> 
+			<div class="row">
+				<div class="span4">
+					<h5>Tags Name</h5> 
+					<textarea id="nameTags" class="span4" rows="10"></textarea>
+				</div>
+				<div class="span6">
+					<h6>Tags Nameについて</h6>
+					<ul>
+						<li>文字入力したいinputやtextarea等のタグのname属性を入力してください</li>
+						<li>フォーマットは1行1タグです。文字入力タグ数を増やす場合は、行を追加してください</li>
+						<li>Spliterで区切られた順とタグの順番は同じです。</li>
+						<li>post-title、post_name、contentの順で「Tags Name」を登録し、Spliterの例の場合はこうなります
+							<blockquote>アフリカはとても楽しい→post-title<br/>---<br />africa-fan→post-nmae<br/>---<br />不思議な人が一杯いるよ。→content</blockquote>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<hr /> 
+			<div class="row">
+				<div class="span6">
+					<button id="save-conf" class="btn" >Save</button>
+					<button id="cancel-conf" class="btn" >Cancel</button>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+		<div class="container">
+			<p class="pull-right"><a href="#">Back to top</a></p>
+			<p> Thanks <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>,  <a href="http://jquery.com/">jQuery</a>.<br />
+					Chrome Writer Version 0.1.1
+			</p>
+		</div>
+		</footer>
+
+
+
+		<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/storage.js" charset="UTF-8"></script> 
+    <script type="text/javascript" src="js/options.js" charset="UTF-8"></script> 
+
+	</body> 
+</html>
