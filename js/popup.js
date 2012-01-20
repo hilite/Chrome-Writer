@@ -29,12 +29,10 @@ $(function(){
 		var article = document.getElementsByName('article')[0].value.split(splitter);
 
 		for(var i=0; i < tagNames.length; i++) {	
-			if (tagNames[i]=="") {
-				js = "document.getElementsByName('" + tagNames[i] + "')[0].value=''";
-				chrome.tabs.executeScript(null, {code:js});
-				js = "document.getElementsByName('" + tagNames[i] + "')[0].value='" + trim(article[i]).replace(/\r?\n|\r/g, "\\n") + "'";
-				chrome.tabs.executeScript(null, {code:js});
-			}
+			js = "document.getElementsByName('" + tagNames[i] + "')[0].value=''";
+			chrome.tabs.executeScript(null, {code:js});
+			js = "document.getElementsByName('" + tagNames[i] + "')[0].value='" + trim(article[i]).replace(/\r?\n|\r/g, "\\n") + "'";
+			chrome.tabs.executeScript(null, {code:js});
 		}
 		//chrome.tabs.executeScript(null, {code:"document.body.style.backgroundColor='red'"});
 
